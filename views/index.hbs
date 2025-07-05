@@ -1,0 +1,59 @@
+{{#extend "title" }} Home {{/extend}}
+<article id="toparticle">
+  <header><h2>{{asText page.data.title }}</h2></header>
+  {{{asHTML page.data.content }}}
+</article>
+
+<aside id="postlist">
+  <h2>Latest Posts</h2>
+  <hr />
+  {{#each posts as | post | }}
+  <ul>
+    <li>
+      <a href="/post/{{post.uid }}">{{asText post.data.title }}</a>
+    </li>
+  </ul>
+  {{/each}}
+</aside>
+
+
+{{! log 'pets' pets}}
+<section class="pet_list">
+  <h2>Our Pets</h2>
+  <hr />
+  {{#each pets as | pet |}}
+  <article>
+    <h3>Meet {{asText pet.data.name}}</h3>
+    <figure>
+      <img src="{{pet.data.image.url}}" width="200" />
+      <figcaption>
+        <a href="/pet/{{pet.uid}}">More Details</a>
+      </figcaption>
+    </figure>
+    <hr />
+  </article>
+  {{/each}}
+</section>
+
+
+
+<aside class="error">
+  <h2>
+    Error : Emergency
+  </h2>
+  <p>
+    Ding-dong. There's an emergency going on. .........<br/> It's still going on.
+  </p>
+</aside>
+
+<aside class="warning">
+  <h2>
+    Warning : Slow Down
+  </h2>
+</aside>
+
+<aside class="positive">
+  <h2>
+    All is welll
+  </h2>
+</aside>

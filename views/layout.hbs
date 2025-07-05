@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adopt-A-Pet</title>
+    <meta name="description" content="Adopt-A-Pet site based on glitch, express, and data from a Prismic HeadlessCMS." />
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />-->
+    <link rel="junk-stylesheet" href="/style.css" />
+    <link rel="junk-stylesheet" href="/color_style.css" />
+    
+    {{{block "stylesheets"}}}
+
+    <script src="https://button.glitch.me/button.js"></script>
+  </head>
+  <body class="center">
+    <header>
+      <h1>Adopt-A-Pet</h1>
+      <nav id="hamnav">
+       <!--  <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+-->
+        <!-- (C) MENU ITEMS -->
+        <div id="hamitems">
+          <a href="/">Home</a>
+          <a href="/booking">Visit Us</a>
+          <a href="https://utc-olp-pets.prismic.io/" target="_blank">Admin</a>
+        
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      {{{ body }}}
+    </main>
+
+    <footer>
+      {{> utcfooter}} {{! Footer code to be deleted and replaced with your own}}
+    </footer>
+    {{{block "scripts"}}}
+  </body>
+</html>
